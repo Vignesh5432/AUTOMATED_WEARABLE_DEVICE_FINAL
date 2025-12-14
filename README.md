@@ -35,6 +35,19 @@ pip install -r requirements.txt
 export FLASK_APP=backend
 flask run --host=0.0.0.0 --port=5000
 ```
+
+Windows (PowerShell):
+```powershell
+# from project folder
+.venv\Scripts\Activate.ps1
+./run.ps1            # starts Flask (FLASK_APP=backend)
+```
+
+Editable install (optional):
+```bash
+# make project importable from parent folders and install deps
+pip install -e .
+``` 
 Or use `./run.sh` (Linux/macOS) or `Procfile` (Heroku-style).
 
 ## Default Credentials (seeded)
