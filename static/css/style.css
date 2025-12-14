@@ -1,0 +1,26 @@
+body { font-family: 'Inter', Arial, sans-serif; background: #0b1220; color: #e7edf5; margin:0; padding:0; }
+.container { padding: 20px; max-width: 1400px; margin: auto; }
+h1, h2, h3 { margin: 8px 0; font-weight: 700; letter-spacing: 0.3px; }
+input, button, textarea, select { font-size: 15px; padding: 12px 14px; margin: 6px 4px; border-radius: 10px; border: 1px solid #1f2a3d; background:#0f1a2b; color:#e7edf5; }
+button { cursor: pointer; background: linear-gradient(135deg, #1f9cf0, #3bd1c8); color:#0b1220; font-weight: 700; border:none; box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
+button.primary { background: linear-gradient(135deg, #4ade80, #22d3ee); color:#0b1220; }
+button.danger { background: linear-gradient(135deg, #ef4444, #f97316); color:white; width:100%; font-size:20px; padding:16px; }
+.hidden { display: none; }
+.status { font-size: 30px; text-align:center; padding:18px; border-radius:14px; margin:14px 0; font-weight:800; letter-spacing: 1px; }
+.status.safe { background:#16a34a; color:#0b1220; }
+.status.WARNING { background:#facc15; color:#0b1220; }
+.status.EMERGENCY { background:#ef4444; color:white; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0% { box-shadow:0 0 0 0 rgba(239,68,68,0.6);} 70% { box-shadow:0 0 0 16px rgba(239,68,68,0);} 100% { box-shadow:0 0 0 0 rgba(239,68,68,0);} }
+.inputs { display:flex; flex-wrap:wrap; gap:12px; }
+.inputs label { display:flex; flex-direction:column; background:#111b2e; padding:12px; border-radius:10px; min-width:160px; border:1px solid #1f2a3d; }
+.hazards button { min-width:130px; font-weight:700; }
+.workers-panel, .detail-panel, .alerts-panel { background:#0f1a2b; padding:12px; border-radius:12px; margin:8px; border:1px solid #1f2a3d; box-shadow:0 6px 16px rgba(0,0,0,0.25); }
+.top { display:flex; flex-wrap:wrap; }
+.worker-card { padding:12px; margin:6px; border-radius:10px; background:#111b2e; border:1px solid #1f2a3d; cursor:pointer; }
+.worker-card:hover { border-color:#3bd1c8; }
+.worker-card.selected { border-color:#3bd1c8; box-shadow:0 0 0 2px rgba(59,209,200,0.4); }
+.alert-card { background:#2b1b16; padding:10px; margin:6px; border-radius:10px; border:1px solid #7c2d12; }
+textarea { width: 100%; min-height: 90px; }
+#historyChart { background:#0b1220; padding:6px; border-radius:10px; }
+.message { background:#0f1a2b; padding:8px; margin:6px 0; border-radius:10px; border:1px solid #1f2a3d; }
+

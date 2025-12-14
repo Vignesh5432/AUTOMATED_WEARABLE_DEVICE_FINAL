@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container worker">
+  <h1>Worker Safety Console</h1>
+  <div id="loginPanel">
+    <h2>Login</h2>
+    <input id="workerId" placeholder="Worker ID" />
+    <input id="pin" placeholder="PIN" type="password" maxlength="4" />
+    <button id="loginBtn">Login</button>
+    <div id="loginMsg"></div>
+  </div>
+
+  <div id="appPanel" class="hidden">
+    <div id="statusTile" class="status safe">SAFE</div>
+
+    <div class="inputs">
+      <label>Heart Rate <input type="number" id="hr" value="82"></label>
+      <label>SpO₂ <input type="number" id="spo2" value="97"></label>
+      <label>Temperature <input type="number" step="0.1" id="temp" value="36.9"></label>
+      <label>Gas PPM <input type="number" id="gas" value="20"></label>
+      <label>Fatigue (0-2) <input type="number" min="0" max="2" id="fatigue" value="0"></label>
+    </div>
+    <div class="auto-sim">
+      <button id="autoSimBtn" class="primary">Start Auto Simulate</button>
+      <span id="autoSimStatus"></span>
+    </div>
+    <button id="sendReading" class="primary">Send Reading</button>
+
+    <div class="hazards">
+      <button data-hazard="GAS_LEAK">Gas Leak</button>
+      <button data-hazard="FIRE">Fire</button>
+      <button data-hazard="OXYGEN_DROP">O₂ Drop</button>
+      <button data-hazard="HEAT_BURST">Heat Burst</button>
+    </div>
+
+    <button id="panicBtn" class="danger">EMERGENCY HELP</button>
+
+    <div id="messages">
+      <h3>Messages</h3>
+      <div id="messageList"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/worker.js') }}"></script>
+{% endblock %}
+

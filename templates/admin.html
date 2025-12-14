@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container admin">
+  <h1>Admin Dashboard</h1>
+  <div id="adminLogin">
+    <input id="adminUser" placeholder="Username" value="admin">
+    <input id="adminPass" placeholder="Password" type="password" value="admin123">
+    <button id="adminLoginBtn">Login</button>
+    <div id="adminLoginMsg"></div>
+  </div>
+
+  <div id="adminApp" class="hidden">
+    <div class="top">
+      <div class="workers-panel">
+        <h3>Workers</h3>
+        <div id="workerCards"></div>
+      </div>
+      <div class="detail-panel">
+        <h3>Selected Worker</h3>
+        <div id="detail"></div>
+        <canvas id="historyChart" height="180"></canvas>
+        <div id="liveReadings"></div>
+        <textarea id="decisionBox" placeholder="Auto decision summary here for admin approval"></textarea>
+        <button id="sendDecisionBtn">Send Decision to Worker</button>
+      </div>
+      <div class="alerts-panel">
+        <h3>Alerts</h3>
+        <div id="alertsList"></div>
+        <h3>Message Worker</h3>
+        <input id="msgWorker" placeholder="Worker ID">
+        <textarea id="msgText" placeholder="Message"></textarea>
+        <select id="msgAction">
+          <option value="">--action--</option>
+          <option value="STOP WORK">STOP WORK</option>
+        </select>
+        <button id="sendMsgBtn">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+{% endblock %}
+

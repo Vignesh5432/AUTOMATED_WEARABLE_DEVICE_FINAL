@@ -1,0 +1,5 @@
+timestamp,heart_rate,spo2,temperature,gas,fatigue
+0,80,97,36.9,25,0
+1,82,97,36.9,20,0
+2,79,98,36.8,22,0
+
